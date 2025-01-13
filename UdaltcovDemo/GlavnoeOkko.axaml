@@ -1,0 +1,39 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1900" d:DesignHeight="980"
+		MaxHeight="980" MaxWidth="1900"
+		MinHeight="650" MinWidth="1000"
+		x:CompileBindings="False"
+		WindowStartupLocation="CenterScreen"
+        x:Class="UdaltcovDemo.GlavnoeOkko"
+        Title="Товары">
+	<Border BorderThickness="2"
+			BorderBrush="OrangeRed">
+		<Grid ShowGridLines="False"
+			  Name="GlavnOkko"
+			  Background="Wheat"
+			  ColumnDefinitions="*,*,*"
+			  RowDefinitions="*,*,*">
+
+			<Button Name="Out"
+					Grid.Column="2"
+					Grid.Row="0"
+					Click="Button_Click_Out"
+					HorizontalAlignment="Right"
+					VerticalAlignment="Top"
+					CornerRadius="10"
+					Height="30"
+					Width="100"
+					BorderThickness="2"
+					BorderBrush="Black"
+					Background="Green"
+					Margin="0 15 15 0">
+				<TextBlock Text="Выйти"
+						   HorizontalAlignment="Center"
+						   Foreground="White"/>
+			</Button>
+		</Grid>
+	</Border>
+</Window>
