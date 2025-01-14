@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\prdb\\Desktop\\\u044D\u043A\u0437\u0430\u043C\u0435\u043D\\UdaltcovDemo\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5CF428-705C-4F08-8E84-E816F0B84EA6}|UdaltcovDemo\\UdaltcovDemo.csproj|c:\\users\\prdb\\desktop\\\u044D\u043A\u0437\u0430\u043C\u0435\u043D\\udaltcovdemo\\udaltcovdemo\\glavnoeokko.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5CF428-705C-4F08-8E84-E816F0B84EA6}|UdaltcovDemo\\UdaltcovDemo.csproj|solutionrelative:udaltcovdemo\\glavnoeokko.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +23,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GlavnoeOkko.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\prdb\\Desktop\\\u044D\u043A\u0437\u0430\u043C\u0435\u043D\\UdaltcovDemo\\UdaltcovDemo\\GlavnoeOkko.axaml.cs",
+              "RelativeDocumentMoniker": "UdaltcovDemo\\GlavnoeOkko.axaml.cs",
+              "ToolTip": "C:\\Users\\prdb\\Desktop\\\u044D\u043A\u0437\u0430\u043C\u0435\u043D\\UdaltcovDemo\\UdaltcovDemo\\GlavnoeOkko.axaml.cs",
+              "RelativeToolTip": "UdaltcovDemo\\GlavnoeOkko.axaml.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAA8wGMAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T13:29:33.204Z",
+              "EditorCaption": ""
             }
           ]
         },

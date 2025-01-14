@@ -7,15 +7,15 @@
 		MaxWidth="800" MinWidth="800"
 		WindowStartupLocation="CenterScreen"
 		x:CompileBindings="False"
-        x:Class="UdaltcovDemo.Errors"
-        Title="Ошибка входа">
+        x:Class="UdaltcovDemo.Errors2"
+        Title="Ошибка удаления">
 	<Border BorderBrush="OrangeRed"
 			BorderThickness="5">
 		<Grid ShowGridLines="False"
 			  Background="Wheat"
 			  ColumnDefinitions="*,*,*"
 			  RowDefinitions="*,*,*">
-			<TextBlock Text="ОШИБКА! ОШИБКА ВВОДА ЛОГИНА ИЛИ ПАРОЛЯ!"
+			<TextBlock Text="ОШИБКА! Товар в крозине удалить нельзя!"
 					   Grid.ColumnSpan="3"
 					   Grid.Row="1"
 					   HorizontalAlignment="Center"

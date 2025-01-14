@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Avalonia.Media;
+using Avalonia.Media.Imaging;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace UdaltcovDemo.Models;
 
@@ -38,4 +41,8 @@ public partial class ConstructionMaterial
     public virtual ProductCategory ProductCategory { get; set; } = null!;
 
     public virtual Supplier SupplierNavigation { get; set; } = null!;
+
+    public Bitmap PictureImage => Picture != null ? new Bitmap(@$"Assets//{Picture}") : null!;
+
+    SolidColorBrush Colors => Count > 0 ? new SolidColorBrush(Color.Parse("White")) : new SolidColorBrush(Color.Parse("Gray"));
 }
