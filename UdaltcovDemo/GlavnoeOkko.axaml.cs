@@ -25,11 +25,18 @@ public partial class GlavnoeOkko : Window
         InitializeComponent();
         Users = user;
         GlavnOkko.DataContext = Users;
+
         if (Users != null)
         {
             First_Name.Text = Users.FirstName;
             name.Text = Users.Name;
             Patronymic.Text = Users.Patronical;
+
+            if (Users.RoleId == 1)
+            {
+                Delete_Tovar.IsVisible = true;
+                Dobavit.IsVisible = true;
+            }
         }
         else
         {
@@ -38,6 +45,8 @@ public partial class GlavnoeOkko : Window
 
         PriceCoboBox.SelectionChanged += PriceCoboBox_SelectionChanged;
         ManufacturerBox.SelectionChanged += ManufacturerBox_SelectionChanged;
+
+        ListBox_GlavOkko.DoubleTapped += ListBox_DoubleTapped;
 
         LoangManufacturer();
         Loang();
@@ -96,6 +105,8 @@ public partial class GlavnoeOkko : Window
 
     private void Button_Click_Dobavit(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
+        var dobavit = ListBox_GlavOkko.SelectedItem as ConstructionMaterial;
+
         RedactOkkoAndDobavit redactOkkoAndDobavit = new RedactOkkoAndDobavit(Users);
         redactOkkoAndDobavit.Show();
         Close();
@@ -129,6 +140,21 @@ public partial class GlavnoeOkko : Window
             Helper.DateBase.ConstructionMaterials.Remove(deletTovar);
             Helper.DateBase.SaveChanges();
             Loang();
+        }
+    }
+
+    private void ListBox_DoubleTapped(object? sender, Avalonia.Input.TappedEventArgs e)
+    {
+        if (Users != null)
+        {
+            if (Users.RoleId == 1)
+            {
+                var redactT = ListBox_GlavOkko.SelectedItem as ConstructionMaterial;
+
+                RedactOkkoAndDobavit redactOkkoAndDobavit = new RedactOkkoAndDobavit(Users, redactT);
+                redactOkkoAndDobavit.Show();
+                Close();
+            }
         }
     }
 }

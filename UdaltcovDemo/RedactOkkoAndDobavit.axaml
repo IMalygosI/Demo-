@@ -3,8 +3,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"  d:DesignWidth="1900" d:DesignHeight="980"
-		MaxHeight="980" MaxWidth="1900"
-		MinHeight="650" MinWidth="1000"
+		MaxHeight="980" MaxWidth="1850"
+		MinHeight="880" MinWidth="1800"
 		x:CompileBindings="False"
 		WindowStartupLocation="CenterScreen"
         x:Class="UdaltcovDemo.RedactOkkoAndDobavit"
@@ -12,19 +12,299 @@
 
 	<Border BorderThickness="2"
 			BorderBrush="OrangeRed">
-		<Grid ShowGridLines="True"
+
+		<Grid ShowGridLines="False"
 			  Name="Okko"
 			  Background="Wheat"
-			  ColumnDefinitions="*,*,*,*"
-			  RowDefinitions="*,5*,*">
+			  ColumnDefinitions="*,*,*"
+			  RowDefinitions="*,8*,*">
 
+			<Image Grid.Column="0"
+				   Grid.Row="0"
+				   Height="65"
+				   Width="65"
+				   Margin="10 10 0 0"
+				   VerticalAlignment="Top"
+				   HorizontalAlignment="Left"
+				   Source="/Assets/logo.png"/>
+
+			<DockPanel Margin="10 10 10 0"
+					   Grid.Column="1"
+					   Grid.Row="0"
+					   HorizontalAlignment="Center"
+					   VerticalAlignment="Bottom">
+				<TextBlock Text="ID:"
+						   Name="TextId"
+						   IsVisible="False"
+						   FontWeight="Bold"
+						   Margin="0 0 0 0"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"/>
+				<TextBlock Text="{Binding ConstructionMaterials}"
+						   IsVisible="False"
+						   Margin="10 8 0 0"
+						   Name="ID"
+						   Height="30"
+						   Width="100"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"/>
+			</DockPanel>
+
+			<Border BorderThickness="2"
+					BorderBrush="DarkBlue"
+					Margin="5"
+					Grid.ColumnSpan="3"
+					Grid.Row="1">
+
+				<StackPanel Grid.Column="1"
+							Grid.Row="1"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Top">
+
+					<DockPanel Margin="10 10 10 0"
+							   HorizontalAlignment="Right"
+							   VerticalAlignment="Center">
+						<TextBlock Text="Артикул:"
+								   FontWeight="Bold"
+								   Margin="0 0 0 0"
+								   HorizontalAlignment="Left"
+								   VerticalAlignment="Center"/>
+						<TextBox Text="{Binding Article}"
+								 Margin="10 0 0 0"
+								 Watermark="Артикул"
+								 Name="Article"
+								 Height="30"
+								 Width="300"
+								 HorizontalAlignment="Right"
+								 VerticalAlignment="Center"/>
+					</DockPanel>
+
+					<DockPanel Margin="10 10 10 0"
+							   HorizontalAlignment="Right"
+							   VerticalAlignment="Center">
+						<TextBlock Text="Наименование:"
+								   FontWeight="Bold"
+								   Margin="0 0 0 0"
+								   HorizontalAlignment="Left"
+								   VerticalAlignment="Center"/>
+						<TextBox Text="{Binding Name}"
+								 Margin="10 0 0 0"
+								 Watermark="Наименование"
+								 Name="Name"
+								 Height="30"
+								 Width="300"
+								 HorizontalAlignment="Left"
+								 VerticalAlignment="Center"/>
+					</DockPanel>
+
+					<DockPanel Margin="10 10 10 0"
+							   HorizontalAlignment="Right"
+							   VerticalAlignment="Center">
+						<TextBlock Text="Единица измерения:"
+								   FontWeight="Bold"
+								   Margin="0 0 0 0"
+								   HorizontalAlignment="Left"
+								   VerticalAlignment="Center"/>
+						<TextBox Text="{Binding UnitOfMeasurement}"
+								 Margin="10 0 0 0"
+								 Watermark="Единица измерения"
+								 Name="UnitOfMeasurement"
+								 Height="30"
+								 Width="300"
+								 HorizontalAlignment="Left"
+								 VerticalAlignment="Center"/>
+					</DockPanel>
+
+					<DockPanel Margin="10 10 10 0"
+							   HorizontalAlignment="Right"
+							   VerticalAlignment="Center">
+						<TextBlock Text="Цена:"
+								   FontWeight="Bold"
+								   Margin="0 0 0 0"
+								   HorizontalAlignment="Left"
+								   VerticalAlignment="Center"/>
+						<TextBox Text="{Binding Price}"
+								 Margin="10 0 0 0"
+								 Watermark="Цена"
+								 Name="Price"
+								 Height="30"
+								 Width="300"
+								 HorizontalAlignment="Left"
+								 VerticalAlignment="Center"/>
+					</DockPanel>
+
+					<DockPanel Margin="10 10 10 0"
+							   HorizontalAlignment="Right"
+							   VerticalAlignment="Center">
+						<TextBlock Text="Максимально возможная скидка:"
+								   FontWeight="Bold"
+								   Margin="0 0 0 0"
+								   HorizontalAlignment="Left"
+								   VerticalAlignment="Center"/>
+						<TextBox Text="{Binding MaximumPossibleDiscountSize}"
+								 Margin="10 0 0 0"
+								 Watermark="Максимально возможная скидка"
+								 Name="MaximumPossibleDiscountSize"
+								 Height="30"
+								 Width="300"
+								 HorizontalAlignment="Left"
+								 VerticalAlignment="Center"/>
+					</DockPanel>
+
+					<DockPanel Margin="10 10 10 0"
+							   HorizontalAlignment="Right"
+							   VerticalAlignment="Center">
+						<TextBlock Text="Производитель:"
+								   FontWeight="Bold"
+								   Margin="0 0 0 0"
+								   HorizontalAlignment="Left"
+								   VerticalAlignment="Center"/>
+
+						<ComboBox Name="ComboBox_Mmanufacturer"
+								  Height="30"
+								  Width="300"
+								  Margin="10 0 0 0"
+								  HorizontalAlignment="Left"
+								  VerticalAlignment="Center">
+							<ComboBox.ItemTemplate>
+								<DataTemplate>
+									<TextBlock Text="{Binding Name}"/>
+								</DataTemplate>
+							</ComboBox.ItemTemplate>
+						</ComboBox>
+					</DockPanel>
+
+					<DockPanel Margin="10 10 10 0"
+							   HorizontalAlignment="Right"
+							   VerticalAlignment="Center">
+						<TextBlock Text="Постафщик:"
+								   FontWeight="Bold"
+								   Margin="0 0 0 0"
+								   HorizontalAlignment="Left"
+								   VerticalAlignment="Center"/>
+
+						<ComboBox Name="ComboBox_Supplier"
+								  Height="30"
+								  Width="300"
+								  Margin="10 0 0 0"
+								  HorizontalAlignment="Left"
+								  VerticalAlignment="Center">
+							<ComboBox.ItemTemplate>
+								<DataTemplate>
+									<TextBlock Text="{Binding Name}"/>
+								</DataTemplate>
+							</ComboBox.ItemTemplate>
+						</ComboBox>
+					</DockPanel>
+
+					<DockPanel Margin="10 10 10 0"
+							   HorizontalAlignment="Right"
+							   VerticalAlignment="Center">
+						<TextBlock Text="Действующая скидка:"
+								   FontWeight="Bold"
+								   Margin="0 0 0 0"
+								   HorizontalAlignment="Left"
+								   VerticalAlignment="Center"/>
+						<TextBox Text="{Binding CurrentDiscount}"
+								 Margin="10 0 0 0"
+								 Watermark="Действующая скидка"
+								 Name="CurrentDiscount"
+								 Height="30"
+								 Width="300"
+								 HorizontalAlignment="Left"
+								 VerticalAlignment="Center"/>
+					</DockPanel>
+
+					<DockPanel Margin="10 10 10 0"
+							   HorizontalAlignment="Right"
+							   VerticalAlignment="Center">
+						<TextBlock Text="Кол-во на складе:"
+								   FontWeight="Bold"
+								   Margin="0 0 0 0"
+								   HorizontalAlignment="Left"
+								   VerticalAlignment="Center"/>
+						<TextBox Text="{Binding Count}"
+								 Margin="10 0 0 0"
+								 Watermark="Кол-во на складе"
+								 Name="Count"
+								 Height="30"
+								 Width="300"
+								 HorizontalAlignment="Left"
+								 VerticalAlignment="Center"/>
+					</DockPanel>
+
+					<DockPanel Margin="10 10 10 0"
+							   HorizontalAlignment="Right"
+							   VerticalAlignment="Center">
+						<TextBlock Text="Категория товара:"
+								   FontWeight="Bold"
+								   Margin="0 0 0 0"
+								   HorizontalAlignment="Left"
+								   VerticalAlignment="Center"/>
+
+						<ComboBox Name="ComboBox_ProductCategoryId"
+								  Height="30"
+								  Width="300"
+								  Margin="10 0 0 0"
+								  HorizontalAlignment="Left"
+								  VerticalAlignment="Center">
+							<ComboBox.ItemTemplate>
+								<DataTemplate>
+									<TextBlock Text="{Binding Name}"/>
+								</DataTemplate>
+							</ComboBox.ItemTemplate>
+						</ComboBox>
+					</DockPanel>
+
+				</StackPanel>
+			</Border>
+			<DockPanel Margin="10"
+					   Grid.Column="2"
+					   Grid.Row="1">
+				<TextBlock Text="Описание:"
+						   Margin="5 0 3 0"
+						   FontWeight="Bold"/>
+				<TextBox Text="{Binding Description}"
+						 Watermark="Описание"
+						 TextWrapping="Wrap"
+						 Name="Description"/>
+			</DockPanel>
+
+			<DockPanel Margin="10"
+					   Grid.Column="0"
+					   Grid.Row="1">
+				<TextBlock Text="Изображение:"
+						   Margin="5 0 3 0"
+						   FontWeight="Bold"/>
+				<Border BorderThickness="2"
+						Height="350"
+						Width="350"
+						BorderBrush="Aqua">
+					<Image Source="{Binding PictureImage}"
+						   Name="Picture"
+						   Margin="10"/>
+				</Border>
+			</DockPanel>
 
 
 
 			<DockPanel Grid.Column="0"
 					   Grid.Row="2">
-				
-				
+
+				<Button Name="Save"
+						Click="Button_Click_Save"
+						CornerRadius="10"
+						Height="30"
+						Width="100"
+						BorderThickness="2"
+						BorderBrush="Black"
+						Background="Green"
+						Margin="10 0 0 0">
+					<TextBlock Text="Сохранить"
+							   HorizontalAlignment="Center"
+							   Foreground="White"/>
+				</Button>
+
 				<Button Name="Out"
 						Click="Button_Click_Out"
 						CornerRadius="10"
@@ -32,7 +312,7 @@
 						Width="100"
 						BorderThickness="2"
 						BorderBrush="Black"
-						Background="Green"
+						Background="Red"
 						Margin="10 0 0 0">
 					<TextBlock Text="Выйти"
 							   HorizontalAlignment="Center"

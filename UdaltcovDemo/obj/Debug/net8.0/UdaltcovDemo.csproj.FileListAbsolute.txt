@@ -167,3 +167,6 @@ C:\Users\prdb\Desktop\экзамен\UdaltcovDemo\UdaltcovDemo\bin\Debug\net8.0\
 C:\Users\prdb\Desktop\экзамен\UdaltcovDemo\UdaltcovDemo\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\prdb\Desktop\экзамен\UdaltcovDemo\UdaltcovDemo\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\prdb\Desktop\экзамен\UdaltcovDemo\UdaltcovDemo\obj\Debug\net8.0\UdaltcovDemo.sourcelink.json
+C:\Users\prdb\Desktop\экзамен\UdaltcovDemo\UdaltcovDemo\obj\Debug\net8.0\UdaltcovDemo.dll
+C:\Users\prdb\Desktop\экзамен\UdaltcovDemo\UdaltcovDemo\obj\Debug\net8.0\refint\UdaltcovDemo.dll
+C:\Users\prdb\Desktop\экзамен\UdaltcovDemo\UdaltcovDemo\obj\Debug\net8.0\UdaltcovDemo.pdb

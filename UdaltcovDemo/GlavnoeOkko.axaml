@@ -15,56 +15,67 @@
 			  Name="GlavnOkko"
 			  Background="Wheat"
 			  ColumnDefinitions="*,*,*"
-			  RowDefinitions="*,12*,*">
+			  RowDefinitions="*,10*,*">
 
-			<DockPanel Grid.Column="1"
-					   Grid.Row="0"
-					   Margin="0 0 0 0"
-					   HorizontalAlignment="Center"
-					   VerticalAlignment="Bottom">
-				<TextBlock Text=""
-						   Name="online"/>
-				<TextBlock Text=" из "
-						   FontWeight="Bold"/>
-				<TextBlock Text=""
-						   Name="baza"/>
-			</DockPanel>
-			
-			<DockPanel Grid.ColumnSpan="2"
-					   Margin="20 0 0 10"
-					   HorizontalAlignment="Left"
-					   VerticalAlignment="Center"
-					   Grid.Row="0">
-				<TextBox Watermark="Поиск: "
-						 Name="TextSearch"
-						 TextChanged="TextBox_TextChanged"
-						 Height="30"
-						 Width="700"
-						 CornerRadius="20"/>
+			<StackPanel Grid.ColumnSpan="3"
+						Grid.Row="0"
+						Margin="20 10 0 0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Top">
 
-				<ComboBox Name="PriceCoboBox"
-						  Height="30"
-						  Width="200"
-						  CornerRadius="20"
-						  SelectedIndex="0"
-						  Margin="10 0 0 0">
-					<ComboBoxItem Content="По умолчания"/>
-					<ComboBoxItem Content="Цена по убыванию"/>
-					<ComboBoxItem Content="Цена по возврастанию"/>
-				</ComboBox>
+				<DockPanel VerticalAlignment="Center">
+					<Image Height="65"
+						   Width="65"
+						   Margin="0 0 0 0"
+						   Source="/Assets/logo.png"/>
 
-				<ComboBox Name="ManufacturerBox"
-						  Height="30"
-						  Width="200"
-						  CornerRadius="20"
-						  Margin="10 0 0 0">
-					<ComboBox.ItemTemplate>
-						<DataTemplate>
-							<TextBlock Text="{Binding Name}"/>
-						</DataTemplate>
-					</ComboBox.ItemTemplate>
-				</ComboBox>
-			</DockPanel>
+					<TextBox Watermark="Поиск: "
+							 Name="TextSearch"
+							 VerticalAlignment="Center"
+							 TextChanged="TextBox_TextChanged"
+							 Height="30"
+							 Width="700"
+							 Margin="10 0 0 0"
+							 CornerRadius="20"/>
+
+					<ComboBox Name="PriceCoboBox"
+							  Height="30"
+							  Width="200"
+							  VerticalAlignment="Center"
+							  CornerRadius="20"
+							  SelectedIndex="0"
+							  Margin="10 0 0 0">
+						<ComboBoxItem Content="По умолчанию"/>
+						<ComboBoxItem Content="Цена по убыванию"/>
+						<ComboBoxItem Content="Цена по возврастанию"/>
+					</ComboBox>
+
+					<ComboBox Name="ManufacturerBox"
+							  Height="30"
+							  VerticalAlignment="Center"
+							  Width="200"
+							  CornerRadius="20"
+							  Margin="10 0 0 0">
+						<ComboBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Name}"/>
+							</DataTemplate>
+						</ComboBox.ItemTemplate>
+					</ComboBox>
+				</DockPanel>
+
+				<DockPanel Margin="650 0 0 0"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Bottom">
+					<TextBlock Text=""
+							   Name="online"/>
+					<TextBlock Text=" из "
+							   FontWeight="Bold"/>
+					<TextBlock Text=""
+							   Name="baza"/>
+				</DockPanel>
+
+			</StackPanel>
 
 			<DockPanel Grid.Column="2"
 					   Grid.Row="0"
@@ -80,7 +91,7 @@
 						   Name="name"/>
 				<TextBlock Text=""
 						   Margin="0 5 5 0"
-						   Name="Patronymic"/>				
+						   Name="Patronymic"/>
 
 				<Button Name="Out"
 						Click="Button_Click_Out"
@@ -97,6 +108,7 @@
 				</Button>
 			</DockPanel>
 
+
 			<ListBox Name="ListBox_GlavOkko"
 					 BorderThickness="2"
 					 BorderBrush="Gray"
@@ -110,14 +122,14 @@
 						<Border CornerRadius="10"
 								Margin="20"
 								Background="{Binding Colors}">
-							<Grid ShowGridLines="True"
+							<Grid ShowGridLines="False"
 								  ColumnDefinitions="250,550,400"
 								  RowDefinitions="20,45,20,100">
-								
+
 								<Image Source="{Binding PictureImage}"
 									   Grid.Column="0"
 									   Grid.RowSpan="4"/>
-								
+
 								<TextBlock Text="{Binding Name}"
 										   FontWeight="Bold"
 										   Grid.Column="1"
@@ -130,7 +142,7 @@
 								<DockPanel Grid.Column="1"
 										   Grid.Row="2">
 									<TextBlock Text="Производитель: "/>
-									<TextBlock Text="{Binding Manufacturer.Name}"
+									<TextBlock Text="{Binding MmanufacturerNavigation.Name}"
 											   TextWrapping="Wrap"/>
 								</DockPanel>
 
@@ -150,7 +162,7 @@
 									<TextBlock Text="{Binding Count}"
 											   TextWrapping="Wrap"/>
 								</DockPanel>
-								
+
 							</Grid>
 						</Border>
 					</DataTemplate>
@@ -168,6 +180,7 @@
 						Name="Dobavit"
 						Click="Button_Click_Dobavit"
 						Width="150"
+						IsVisible="False"
 						BorderThickness="2"
 						BorderBrush="Black"
 						Background="Green">
@@ -177,9 +190,10 @@
 							   FontWeight="Bold"
 							   Foreground="White"/>
 				</Button>
-				
+
 				<Button CornerRadius ="10"
 						Height="30"
+						IsVisible="False"
 						Name="Delete_Tovar"
 						Click="Button_Click_Delete_Tovar"
 						Width="150"
@@ -194,7 +208,6 @@
 							   Foreground="White"/>
 				</Button>
 			</DockPanel>
-			
 		</Grid>
 	</Border>
 </Window>

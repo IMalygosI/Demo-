@@ -42,7 +42,7 @@ public partial class ConstructionMaterial
 
     public virtual Supplier SupplierNavigation { get; set; } = null!;
 
-    public Bitmap PictureImage => Picture != null ? new Bitmap(@$"Assets//{Picture}") : null!;
+    public Bitmap PictureImage => Picture != null ? new Bitmap(@$"Assets//{Picture}") : new Bitmap(@"Assets//picture.png");
 
     SolidColorBrush Colors => Count > 0 ? new SolidColorBrush(Color.Parse("White")) : new SolidColorBrush(Color.Parse("Gray"));
 }
