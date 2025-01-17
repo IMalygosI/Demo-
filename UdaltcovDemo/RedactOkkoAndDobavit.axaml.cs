@@ -5,6 +5,7 @@ using Avalonia.Media.Imaging;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using Tmds.DBus.Protocol;
@@ -35,6 +36,7 @@ public partial class RedactOkkoAndDobavit : Window
         user1 = user;
         constructionMaterial1 = new ConstructionMaterial();
         Okko.DataContext = constructionMaterial1;
+        UnitOfMeasurement.Text = "шт.";
         Loang_ComboBoxManufacturer();
         Loang_ComboBoxSupplier();
         Loang_ComboBoxProductCategoryId();
@@ -143,10 +145,6 @@ public partial class RedactOkkoAndDobavit : Window
             constructionMaterial1.Supplier = ComboBox_Supplier.SelectedIndex;
             constructionMaterial1.ProductCategoryId = ComboBox_ProductCategoryId.SelectedIndex;
 
-            constructionMaterial1.Picture = Convert.ToString(Picture.Source);
-
-           // constructionMaterial1.Picture = Picture.Source;
-
             Helper.DateBase.ConstructionMaterials.Add(constructionMaterial1);
         }
 
@@ -198,7 +196,8 @@ public partial class RedactOkkoAndDobavit : Window
                                                         // Если параметр Категории указан, то проходим дальше
                                                         if (constructionMaterial1.ProductCategoryId != 0)
                                                         {
-                                                            if (constructionMaterial1.MaximumPossibleDiscountSize > 0 && constructionMaterial1.CurrentDiscount > 0)
+                                                            // Если параметр Макс. скидка и действ. скидка больше 0 и не равно отрицательному значению, то проходим дальше
+                                                            if (constructionMaterial1.MaximumPossibleDiscountSize >= 0 && constructionMaterial1.CurrentDiscount >= 0)
                                                             {
                                                                 Helper.DateBase.SaveChanges();
                                                                 GlavnoeOkko glavnoeOkko = new GlavnoeOkko(user1);
@@ -317,15 +316,25 @@ public partial class RedactOkkoAndDobavit : Window
     {
         try
         {
+            //Открываем
             OpenFileDialog dialog = new OpenFileDialog();
+            //Добавляем
             dialog.Filters.Add(fileFilter);
+            //
             var result = await dialog.ShowAsync(this);
+            //
             string file = String.Join("", result);
+            //
             long length = new System.IO.FileInfo(file).Length;
+            //
             Random random = new Random();
+            //
             string photo = "Assets/photo" + random.Next(1, 10808) + ".jpg";
+            //
             System.IO.File.Copy(file, photo);
+            //            
             Picture.Source = new Bitmap(photo);
+            //
             constructionMaterial1.Picture = photo.Substring(6);
         }
         catch { }
