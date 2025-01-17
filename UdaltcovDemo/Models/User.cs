@@ -19,8 +19,9 @@ public partial class User
 
     public int RoleId { get; set; }
 
-    public string RoleName => RoleId == 1 ? "Администратор" : RoleId == 2 ? "Менеджер" : RoleId == 3 ? "Клиент" : null;
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 
     public virtual Role Role { get; set; } = null!;
+
+    public string RoleName => RoleId == 1 ? "Администратор" : RoleId == 2 ? "Менеджер" : RoleId == 3 ? "Клиент" : null;
 }

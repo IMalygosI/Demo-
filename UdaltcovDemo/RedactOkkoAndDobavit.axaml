@@ -58,6 +58,7 @@
 
 				<StackPanel Grid.Column="1"
 							Grid.Row="1"
+							Margin="0 0 0 0"
 							HorizontalAlignment="Center"
 							VerticalAlignment="Top">
 
@@ -132,9 +133,14 @@
 								 Watermark="Цена"
 								 Name="Price"
 								 Height="30"
-								 Width="300"
+								 Width="265"
 								 HorizontalAlignment="Left"
 								 VerticalAlignment="Center"/>
+						<TextBlock Text=" Руб."
+								   FontWeight="Bold"
+								   Margin="0 0 0 0"
+								   HorizontalAlignment="Right"
+								   VerticalAlignment="Center"/>
 					</DockPanel>
 
 					<DockPanel Margin="10 10 10 0"
@@ -150,9 +156,14 @@
 								 Watermark="Максимально возможная скидка"
 								 Name="MaximumPossibleDiscountSize"
 								 Height="30"
-								 Width="300"
+								 Width="275"
 								 HorizontalAlignment="Left"
 								 VerticalAlignment="Center"/>
+						<TextBlock Text=" %."
+								   FontWeight="Bold"
+								   Margin="0 0 0 0"
+								   HorizontalAlignment="Left"
+								   VerticalAlignment="Center"/>
 					</DockPanel>
 
 					<DockPanel Margin="10 10 10 0"
@@ -214,9 +225,14 @@
 								 Watermark="Действующая скидка"
 								 Name="CurrentDiscount"
 								 Height="30"
-								 Width="300"
+								 Width="275"
 								 HorizontalAlignment="Left"
 								 VerticalAlignment="Center"/>
+						<TextBlock Text=" %."
+								   FontWeight="Bold"
+								   Margin="0 0 0 0"
+								   HorizontalAlignment="Left"
+								   VerticalAlignment="Center"/>
 					</DockPanel>
 
 					<DockPanel Margin="10 10 10 0"

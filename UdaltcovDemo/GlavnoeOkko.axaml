@@ -149,8 +149,8 @@
 									<TextBlock Text="Цена: "/>
 									<TextBlock Text="{Binding Price}"
 											   TextWrapping="Wrap"/>
+									<TextBlock Text=" Руб."/>
 								</DockPanel>
-
 
 								<DockPanel Grid.Column="2"
 										   Grid.RowSpan="4"
@@ -159,6 +159,8 @@
 									<TextBlock Text="Наличие на складе: "/>
 									<TextBlock Text="{Binding Count}"
 											   TextWrapping="Wrap"/>
+									<TextBlock Text=" "/>
+									<TextBlock Text="{Binding UnitOfMeasurement}"/>
 								</DockPanel>
 
 							</Grid>

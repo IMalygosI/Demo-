@@ -83,6 +83,10 @@ public partial class Errors : Window
         {
             Warning.Text = Warnings;
         }
+        else if (Warnings == "ОШИБКА! Настоящая скидка не может быть больше или равна Максимальной!")
+        {
+            Warning.Text = Warnings;
+        }
     }
 
     private void Button_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
