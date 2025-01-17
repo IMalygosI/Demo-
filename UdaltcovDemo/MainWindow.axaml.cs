@@ -22,7 +22,8 @@ namespace UdaltcovDemo
             }
             else 
             {
-                Errors errors = new Errors();
+                string warning = "ÎØÈÁÊÀ! Íåâåğíûé ËÎÃÈÍ ÈËÈ ÏÀĞÎËÜ!";
+                Errors errors = new Errors(warning);
                 errors.ShowDialog(this);
             }
         }

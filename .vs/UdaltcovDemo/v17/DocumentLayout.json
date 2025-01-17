@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\prdb\\Desktop\\\u044D\u043A\u0437\u0430\u043C\u0435\u043D\\UdaltcovDemo\\",
+  "WorkspaceRootPath": "C:\\Users\\prdb\\Desktop\\UdaltcovDemo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB5CF428-705C-4F08-8E84-E816F0B84EA6}|UdaltcovDemo\\UdaltcovDemo.csproj|c:\\users\\prdb\\desktop\\\u044D\u043A\u0437\u0430\u043C\u0435\u043D\\udaltcovdemo\\udaltcovdemo\\redactokkoanddobavit.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB5CF428-705C-4F08-8E84-E816F0B84EA6}|UdaltcovDemo\\UdaltcovDemo.csproj|c:\\users\\prdb\\desktop\\udaltcovdemo\\udaltcovdemo\\redactokkoanddobavit.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB5CF428-705C-4F08-8E84-E816F0B84EA6}|UdaltcovDemo\\UdaltcovDemo.csproj|solutionrelative:udaltcovdemo\\redactokkoanddobavit.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB5CF428-705C-4F08-8E84-E816F0B84EA6}|UdaltcovDemo\\UdaltcovDemo.csproj|c:\\users\\prdb\\desktop\\\u044D\u043A\u0437\u0430\u043C\u0435\u043D\\udaltcovdemo\\udaltcovdemo\\glavnoeokko.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5CF428-705C-4F08-8E84-E816F0B84EA6}|UdaltcovDemo\\UdaltcovDemo.csproj|solutionrelative:udaltcovdemo\\glavnoeokko.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB5CF428-705C-4F08-8E84-E816F0B84EA6}|UdaltcovDemo\\UdaltcovDemo.csproj|c:\\users\\prdb\\desktop\\udaltcovdemo\\udaltcovdemo\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5CF428-705C-4F08-8E84-E816F0B84EA6}|UdaltcovDemo\\UdaltcovDemo.csproj|solutionrelative:udaltcovdemo\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB5CF428-705C-4F08-8E84-E816F0B84EA6}|UdaltcovDemo\\UdaltcovDemo.csproj|c:\\users\\prdb\\desktop\\\u044D\u043A\u0437\u0430\u043C\u0435\u043D\\udaltcovdemo\\udaltcovdemo\\models\\constructionmaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5CF428-705C-4F08-8E84-E816F0B84EA6}|UdaltcovDemo\\UdaltcovDemo.csproj|solutionrelative:udaltcovdemo\\models\\constructionmaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB5CF428-705C-4F08-8E84-E816F0B84EA6}|UdaltcovDemo\\UdaltcovDemo.csproj|c:\\users\\prdb\\desktop\\udaltcovdemo\\udaltcovdemo\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{BB5CF428-705C-4F08-8E84-E816F0B84EA6}|UdaltcovDemo\\UdaltcovDemo.csproj|solutionrelative:udaltcovdemo\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,47 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ConstructionMaterial.cs",
-              "DocumentMoniker": "C:\\Users\\prdb\\Desktop\\\u044D\u043A\u0437\u0430\u043C\u0435\u043D\\UdaltcovDemo\\UdaltcovDemo\\Models\\ConstructionMaterial.cs",
-              "RelativeDocumentMoniker": "UdaltcovDemo\\Models\\ConstructionMaterial.cs",
-              "ToolTip": "C:\\Users\\prdb\\Desktop\\\u044D\u043A\u0437\u0430\u043C\u0435\u043D\\UdaltcovDemo\\UdaltcovDemo\\Models\\ConstructionMaterial.cs",
-              "RelativeToolTip": "UdaltcovDemo\\Models\\ConstructionMaterial.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAswCwAAAB0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T14:13:51.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GlavnoeOkko.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\prdb\\Desktop\\\u044D\u043A\u0437\u0430\u043C\u0435\u043D\\UdaltcovDemo\\UdaltcovDemo\\GlavnoeOkko.axaml.cs",
-              "RelativeDocumentMoniker": "UdaltcovDemo\\GlavnoeOkko.axaml.cs",
-              "ToolTip": "C:\\Users\\prdb\\Desktop\\\u044D\u043A\u0437\u0430\u043C\u0435\u043D\\UdaltcovDemo\\UdaltcovDemo\\GlavnoeOkko.axaml.cs",
-              "RelativeToolTip": "UdaltcovDemo\\GlavnoeOkko.axaml.cs",
-              "ViewState": "AQIAAGgAAAAAAAAAAAAAwH0AAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T14:06:34.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RedactOkkoAndDobavit.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\prdb\\Desktop\\\u044D\u043A\u0437\u0430\u043C\u0435\u043D\\UdaltcovDemo\\UdaltcovDemo\\RedactOkkoAndDobavit.axaml.cs",
-              "RelativeDocumentMoniker": "UdaltcovDemo\\RedactOkkoAndDobavit.axaml.cs",
-              "ToolTip": "C:\\Users\\prdb\\Desktop\\\u044D\u043A\u0437\u0430\u043C\u0435\u043D\\UdaltcovDemo\\UdaltcovDemo\\RedactOkkoAndDobavit.axaml.cs",
-              "RelativeToolTip": "UdaltcovDemo\\RedactOkkoAndDobavit.axaml.cs",
-              "ViewState": "AQIAAIMAAAAAAAAAAADgv40AAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T14:04:59.137Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -70,6 +31,44 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RedactOkkoAndDobavit.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\prdb\\Desktop\\UdaltcovDemo\\UdaltcovDemo\\RedactOkkoAndDobavit.axaml.cs",
+              "RelativeDocumentMoniker": "UdaltcovDemo\\RedactOkkoAndDobavit.axaml.cs",
+              "ToolTip": "C:\\Users\\prdb\\Desktop\\UdaltcovDemo\\UdaltcovDemo\\RedactOkkoAndDobavit.axaml.cs",
+              "RelativeToolTip": "UdaltcovDemo\\RedactOkkoAndDobavit.axaml.cs",
+              "ViewState": "AQIAACIBAAAAAAAAAAAAADIBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T07:53:20.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\prdb\\Desktop\\UdaltcovDemo\\UdaltcovDemo\\MainWindow.axaml.cs",
+              "RelativeDocumentMoniker": "UdaltcovDemo\\MainWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\prdb\\Desktop\\UdaltcovDemo\\UdaltcovDemo\\MainWindow.axaml.cs",
+              "RelativeToolTip": "UdaltcovDemo\\MainWindow.axaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T07:51:31.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\prdb\\Desktop\\UdaltcovDemo\\UdaltcovDemo\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "UdaltcovDemo\\MainWindow.axaml",
+              "ToolTip": "C:\\Users\\prdb\\Desktop\\UdaltcovDemo\\UdaltcovDemo\\MainWindow.axaml",
+              "RelativeToolTip": "UdaltcovDemo\\MainWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-17T07:51:31.453Z",
+              "EditorCaption": ""
             }
           ]
         },

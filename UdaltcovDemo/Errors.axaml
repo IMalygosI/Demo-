@@ -12,10 +12,12 @@
 	<Border BorderBrush="OrangeRed"
 			BorderThickness="5">
 		<Grid ShowGridLines="False"
+			  Name="WarningGrid"
 			  Background="Wheat"
 			  ColumnDefinitions="*,*,*"
 			  RowDefinitions="*,*,*">
-			<TextBlock Text="ОШИБКА! ОШИБКА ВВОДА ЛОГИНА ИЛИ ПАРОЛЯ!"
+			<TextBlock Text=""
+					   Name="Warning"
 					   Grid.ColumnSpan="3"
 					   Grid.Row="1"
 					   HorizontalAlignment="Center"

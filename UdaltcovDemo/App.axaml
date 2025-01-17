@@ -5,6 +5,17 @@
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.Styles>
+		<Style Selector="Window">
+			<Setter Property="FontFamily" Value="Comic Sans MS"/>
+		</Style>
+
+		<Style Selector="Window">
+			<Setter Property="MaxHeight" Value="980"/>
+			<Setter Property="MinHeight" Value="650"/>
+			<Setter Property="MaxWidth" Value="1900"/>
+			<Setter Property="MinWidth" Value="1000"/>
+		</Style>
+		
         <FluentTheme />
     </Application.Styles>
 </Application>

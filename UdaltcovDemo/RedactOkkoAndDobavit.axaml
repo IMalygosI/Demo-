@@ -71,6 +71,7 @@
 								   VerticalAlignment="Center"/>
 						<TextBox Text="{Binding Article}"
 								 Margin="10 0 0 0"
+								 MaxLength="10"
 								 Watermark="Артикул"
 								 Name="Article"
 								 Height="30"
@@ -90,6 +91,7 @@
 						<TextBox Text="{Binding Name}"
 								 Margin="10 0 0 0"
 								 Watermark="Наименование"
+								 MaxLength="100"
 								 Name="Name"
 								 Height="30"
 								 Width="300"
@@ -100,8 +102,10 @@
 					<DockPanel Margin="10 10 10 0"
 							   HorizontalAlignment="Right"
 							   VerticalAlignment="Center">
-						<TextBlock Text="Единица измерения:"
+						<TextBlock Text="Единица измерения. 'указывается в (шт.)'		:"
 								   FontWeight="Bold"
+								   MaxLines="3"
+								   TextWrapping="Wrap"
 								   Margin="0 0 0 0"
 								   HorizontalAlignment="Left"
 								   VerticalAlignment="Center"/>
@@ -266,6 +270,7 @@
 						   FontWeight="Bold"/>
 				<TextBox Text="{Binding Description}"
 						 Watermark="Описание"
+						 MaxLines="1000"
 						 TextWrapping="Wrap"
 						 Name="Description"/>
 			</DockPanel>
@@ -318,6 +323,21 @@
 							   HorizontalAlignment="Center"
 							   Foreground="White"/>
 				</Button>
+
+				<Button Name="Update_Image"
+						Click="Button_Click_Update_Image"
+						CornerRadius="10"
+						Height="30"
+						Width="100"
+						BorderThickness="2"
+						BorderBrush="Black"
+						Background="Green"
+						Margin="10 0 0 0">
+					<TextBlock Text="Добавить Картинку"
+							   HorizontalAlignment="Center"
+							   Foreground="White"/>
+				</Button>
+
 			</DockPanel>
 		</Grid>
 	</Border>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\prdb\\Desktop\\экзамен\\UdaltcovDemo\\UdaltcovDemo\\UdaltcovDemo.csproj": {}
+    "C:\\Users\\prdb\\Desktop\\UdaltcovDemo\\UdaltcovDemo\\UdaltcovDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\prdb\\Desktop\\экзамен\\UdaltcovDemo\\UdaltcovDemo\\UdaltcovDemo.csproj": {
+    "C:\\Users\\prdb\\Desktop\\UdaltcovDemo\\UdaltcovDemo\\UdaltcovDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prdb\\Desktop\\экзамен\\UdaltcovDemo\\UdaltcovDemo\\UdaltcovDemo.csproj",
+        "projectUniqueName": "C:\\Users\\prdb\\Desktop\\UdaltcovDemo\\UdaltcovDemo\\UdaltcovDemo.csproj",
         "projectName": "UdaltcovDemo",
-        "projectPath": "C:\\Users\\prdb\\Desktop\\экзамен\\UdaltcovDemo\\UdaltcovDemo\\UdaltcovDemo.csproj",
+        "projectPath": "C:\\Users\\prdb\\Desktop\\UdaltcovDemo\\UdaltcovDemo\\UdaltcovDemo.csproj",
         "packagesPath": "C:\\Users\\prdb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prdb\\Desktop\\экзамен\\UdaltcovDemo\\UdaltcovDemo\\obj\\",
+        "outputPath": "C:\\Users\\prdb\\Desktop\\UdaltcovDemo\\UdaltcovDemo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\prdb\\AppData\\Roaming\\NuGet\\NuGet.Config",

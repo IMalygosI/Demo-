@@ -132,7 +132,8 @@ public partial class GlavnoeOkko : Window
 
         if (isInCart)
         {
-            Errors2 errors = new Errors2();
+            string warning = "ОШИБКА! Товар в крозине удалить нельзя!";
+            Errors errors = new Errors(warning);
             errors.ShowDialog(this);
         }
         else
