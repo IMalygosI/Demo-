@@ -27,6 +27,25 @@
 						Grid.Row="1"
 						HorizontalAlignment="Center"
 						VerticalAlignment="Center">
+
+
+				<TextBlock Margin="0 5 0 0"
+						   TextDecorations="Strikethrough"
+						   Foreground="Red"
+						   Name="captcha"
+						   Text="{Binding captcha}"
+						   IsVisible="False"
+						   Height="30"
+						   Width="200"/>
+				
+				<TextBox Margin="0 5 0 0"
+						 Name="Captcha"
+						 IsVisible="False"
+						 Watermark="Капча"
+						 CornerRadius="10"
+						 Height="30"
+						 Width="200"/>
+				
 					<TextBox Watermark="Логин"
 							 Margin="0 5 0 0"
 							 Name="login"

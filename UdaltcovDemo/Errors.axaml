@@ -23,6 +23,7 @@
 					   HorizontalAlignment="Center"
 					   VerticalAlignment="Top"/>
 			<Button Name="Out"
+					IsVisible="True"
 					Click="Button_Click"
 					Grid.Column="1"
 					Grid.Row="1"

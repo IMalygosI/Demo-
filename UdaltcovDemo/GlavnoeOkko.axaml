@@ -9,7 +9,7 @@
         Title="Товары">
 	<Border BorderThickness="2"
 			BorderBrush="OrangeRed">
-		<Grid ShowGridLines="True"
+		<Grid ShowGridLines="False"
 			  Name="GlavnOkko"
 			  Background="Wheat"
 			  ColumnDefinitions="*,*,*"

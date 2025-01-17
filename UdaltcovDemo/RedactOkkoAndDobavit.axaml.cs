@@ -141,9 +141,12 @@ public partial class RedactOkkoAndDobavit : Window
             constructionMaterial1.Count = Convert.ToInt32(Count.Text);
             constructionMaterial1.Mmanufacturer = ComboBox_Mmanufacturer.SelectedIndex;
             constructionMaterial1.Supplier = ComboBox_Supplier.SelectedIndex;
-            constructionMaterial1.ProductCategoryId = ComboBox_ProductCategoryId.SelectedIndex;           
+            constructionMaterial1.ProductCategoryId = ComboBox_ProductCategoryId.SelectedIndex;
+
             constructionMaterial1.Picture = Convert.ToString(Picture.Source);
-            
+
+           // constructionMaterial1.Picture = Picture.Source;
+
             Helper.DateBase.ConstructionMaterials.Add(constructionMaterial1);
         }
 
@@ -157,136 +160,145 @@ public partial class RedactOkkoAndDobavit : Window
                 break;
             }
         }
-
-        // если Артикул не присутствует в базе то проходит
-        if (ProverkaOnArticle == true || upd == true)
+        // если Артикул добавлен, то проходит
+        if (ProverkaOnArticle  != null)
         {
-            // Если Наименование указанно, то проходим дальше
-            if (constructionMaterial1.Name != null)
+            // если Артикул не присутствует в базе, то проходит
+            if (ProverkaOnArticle == true || upd == true)
             {
-                // Если параметр Ед. Изм. указан, то проходим дальше
-                if (constructionMaterial1.UnitOfMeasurement != null)
+                // Если Наименование указанно, то проходим дальше
+                if (constructionMaterial1.Name != null)
                 {
-                    if (constructionMaterial1.UnitOfMeasurement == "шт.")
+                    // Если параметр Ед. Изм. указан, то проходим дальше
+                    if (constructionMaterial1.UnitOfMeasurement != null)
                     {
-                        // Если параметр Цена указана, то проходим дальше
-                        if (constructionMaterial1.Price != null)
+                        if (constructionMaterial1.UnitOfMeasurement == "шт.")
                         {
-                            // Если параметр Кол-во указанно, то проходим дальше
-                            if (constructionMaterial1.Count != null)
+                            // Если параметр Цена указана, то проходим дальше
+                            if (constructionMaterial1.Price != null)
                             {
-                                // Если параметр Цена и Количество больше 0 и не равно отрицательному значению, то проходим дальше
-                                if (constructionMaterial1.Price >= 0 && constructionMaterial1.Count >= 0)
+                                // Если параметр Кол-во указанно, то проходим дальше
+                                if (constructionMaterial1.Count != null)
                                 {
-                                    // Если параметр Максимальной скидки указан, то проходим дальше
-                                    if (constructionMaterial1.MaximumPossibleDiscountSize != null)
+                                    // Если параметр Цена и Количество больше 0 и не равно отрицательному значению, то проходим дальше
+                                    if (constructionMaterial1.Price >= 0 && constructionMaterial1.Count >= 0)
                                     {
-                                        // Если параметр Скидки указан, то проходим дальше
-                                        if (constructionMaterial1.CurrentDiscount != null)
+                                        // Если параметр Максимальной скидки указан, то проходим дальше
+                                        if (constructionMaterial1.MaximumPossibleDiscountSize != null)
                                         {
-                                            // Если параметр Производителя указан, то проходим дальше
-                                            if (constructionMaterial1.Mmanufacturer != 0)
+                                            // Если параметр Скидки указан, то проходим дальше
+                                            if (constructionMaterial1.CurrentDiscount != null)
                                             {
-                                                // Если параметр Поставщика указан, то проходим дальше
-                                                if (constructionMaterial1.Supplier != 0)
+                                                // Если параметр Производителя указан, то проходим дальше
+                                                if (constructionMaterial1.Mmanufacturer != 0)
                                                 {
-                                                    // Если параметр Категории указан, то проходим дальше
-                                                    if (constructionMaterial1.ProductCategoryId != 0)
+                                                    // Если параметр Поставщика указан, то проходим дальше
+                                                    if (constructionMaterial1.Supplier != 0)
                                                     {
-                                                        if (constructionMaterial1.MaximumPossibleDiscountSize > 0 && constructionMaterial1.CurrentDiscount > 0)
+                                                        // Если параметр Категории указан, то проходим дальше
+                                                        if (constructionMaterial1.ProductCategoryId != 0)
                                                         {
-                                                            Helper.DateBase.SaveChanges();
-                                                            GlavnoeOkko glavnoeOkko = new GlavnoeOkko(user1);
-                                                            glavnoeOkko.Show();
-                                                            Close();
+                                                            if (constructionMaterial1.MaximumPossibleDiscountSize > 0 && constructionMaterial1.CurrentDiscount > 0)
+                                                            {
+                                                                Helper.DateBase.SaveChanges();
+                                                                GlavnoeOkko glavnoeOkko = new GlavnoeOkko(user1);
+                                                                glavnoeOkko.Show();
+                                                                Close();
+                                                            }
+                                                            else
+                                                            {
+                                                                string warning = "ОШИБКА! Скидки не могут быть отрицательными!";
+                                                                Errors errors = new Errors(warning);
+                                                                errors.ShowDialog(this);
+                                                            }
                                                         }
                                                         else
                                                         {
-                                                            string warning = "ОШИБКА! Скидки не могут быть отрицательными!";
+                                                            string warning = "ОШИБКА! Вы не выбрали Категорию!";
                                                             Errors errors = new Errors(warning);
                                                             errors.ShowDialog(this);
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        string warning = "ОШИБКА! Вы не выбрали Категорию!";
+                                                        string warning = "ОШИБКА! Вы не выбрали Поставщика!";
                                                         Errors errors = new Errors(warning);
                                                         errors.ShowDialog(this);
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    string warning = "ОШИБКА! Вы не выбрали Поставщика!";
+                                                    string warning = "ОШИБКА! Вы не выбрали производителя!";
                                                     Errors errors = new Errors(warning);
                                                     errors.ShowDialog(this);
                                                 }
                                             }
                                             else
                                             {
-                                                string warning = "ОШИБКА! Вы не выбрали производителя!";
+                                                string warning = "ОШИБКА! Вы не указали действующую скидку!";
                                                 Errors errors = new Errors(warning);
                                                 errors.ShowDialog(this);
                                             }
                                         }
                                         else
                                         {
-                                            string warning = "ОШИБКА! Вы не указали действующую скидку!";
+                                            string warning = "ОШИБКА! Вы не указали Максимальную скидку!";
                                             Errors errors = new Errors(warning);
                                             errors.ShowDialog(this);
                                         }
                                     }
                                     else
                                     {
-                                        string warning = "ОШИБКА! Вы не указали Максимальную скидку!";
+                                        string warning = "ОШИБКА! Цена и количество не могут быть отрицательными!";
                                         Errors errors = new Errors(warning);
                                         errors.ShowDialog(this);
                                     }
                                 }
                                 else
                                 {
-                                    string warning = "ОШИБКА! Цена и количество не могут быть отрицательными!";
+                                    string warning = "ОШИБКА! Укажите количество!";
                                     Errors errors = new Errors(warning);
                                     errors.ShowDialog(this);
                                 }
                             }
                             else
                             {
-                                string warning = "ОШИБКА! Укажите количество!";
+                                string warning = "ОШИБКА! Укажите цену!";
                                 Errors errors = new Errors(warning);
                                 errors.ShowDialog(this);
                             }
                         }
                         else
                         {
-                            string warning = "ОШИБКА! Укажите цену!";
+                            string warning = "ОШИБКА! Неверный формат Ед. Измерения! Укажите в (шт.)!";
                             Errors errors = new Errors(warning);
                             errors.ShowDialog(this);
                         }
                     }
                     else
                     {
-                        string warning = "ОШИБКА! Неверный формат Ед. Измерения! Укажите в (шт.)!";
+                        string warning = "ОШИБКА! Укажите единицу измерения!";
                         Errors errors = new Errors(warning);
                         errors.ShowDialog(this);
                     }
                 }
                 else
                 {
-                    string warning = "ОШИБКА! Укажите единицу измерения!";
+                    string warning = "ОШИБКА! Укажите Наименование!";
                     Errors errors = new Errors(warning);
                     errors.ShowDialog(this);
                 }
             }
-            else
+            else if (ProverkaOnArticle == false)
             {
-                string warning = "ОШИБКА! Укажите Наименование!";
+                string warning = "ОШИБКА! Артикул уже занят!";
                 Errors errors = new Errors(warning);
                 errors.ShowDialog(this);
             }
         }
-        else if (ProverkaOnArticle == false)
+        else
         {
-            string warning = "ОШИБКА! Артикул уже занят!";
+            string warning = "ОШИБКА! Добавьте Артикул!";
             Errors errors = new Errors(warning);
             errors.ShowDialog(this);
         }
@@ -318,5 +330,5 @@ public partial class RedactOkkoAndDobavit : Window
         }
         catch { }
     }
-               
+
 }

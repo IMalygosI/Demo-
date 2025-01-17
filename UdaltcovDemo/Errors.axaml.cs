@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using System.Threading.Tasks;
 
 namespace UdaltcovDemo;
 
@@ -10,10 +11,18 @@ public partial class Errors : Window
     {
         InitializeComponent();
     }
+
     public Errors(string Warnings)
     {
         InitializeComponent();
-
+        if (Warnings == "ОШИБКА! Добавьте Артикул!")
+        {
+            Warning.Text = Warnings;
+        }
+        if (Warnings == "ОШИБКА! Ошибка в вводе Капчи")
+        {
+            Warning.Text = Warnings;
+        }
         if (Warnings == "ОШИБКА! Неверный ЛОГИН ИЛИ ПАРОЛЬ!")
         {
             Warning.Text = Warnings;
@@ -34,7 +43,7 @@ public partial class Errors : Window
         {
             Warning.Text = Warnings;
         }
-        else if (Warnings == "ОШИБКА! Артикул уже занят!")
+        else if (Warnings == "ОШИБКА! Артикул уже занят или отсутствует!")
         {
             Warning.Text = Warnings;
         }
